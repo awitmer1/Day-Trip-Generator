@@ -41,10 +41,10 @@ run_day_trip_generator()
 
 
 
-destination_list = []
+destination_list = ["Tatooine", "Hoth", "Coruscant", "Endor", "Tython", "Geonosis", "Korriban", "Mandalore"]
 
-restaurant_list = []
+restaurant_list = ["Mos Eisley Cantina", "Canto Bight Casino", "Lars Family Homestead", "Dex's Restaurant", "Ewok Treetop Village"]
 
-transportation_mode = []
+transportation_mode = ["Tantive IV", "Millenium Falcon", "Slave I", "Home One", "Executor", "Invisible Hand", "Scimitar"]
 
-entertainment_list = []
+entertainment_list = ["Twi'lek Dance Party", "Round of Sabaac", "Ewok BBQ", "Kessel Run", "Beggars Canyon Target Practice"]
