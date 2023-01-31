@@ -41,24 +41,7 @@ def itinerary():
     random_transportation()
     random_entertainment()
     user_satisfaction()
-
-def user_satisfaction():
-    user_input = input(f"Are you happy with this itinerary? y/n")
-    if user_input == "n":    
-        desired_change = input(f"What would you like to change? Destination, Restaurant, Transportation, Entertainment")
-        if desired_change == "Destination":
-            random_destination()
-        elif desired_change == "Restaurant":
-            random_restaurant()
-        elif desired_change == "Transportation":
-            random_transportation()
-        elif desired_change == "Entertainment":
-            random_entertainment()
-        else:
-            print("Please try that again...")
-    else:
-        print("Enjoy your trip! Watch out for Jawas!") 
-
+    
 def random_destination():
     for dest in destination_list:
         location = random.choice(destination_list)
@@ -79,5 +62,68 @@ def random_entertainment():
         entertainment = random.choice(entertainment_list)
     print(f"Entertainment: {entertainment}")
 
+def user_satisfaction():
+    user_input = input(f"Are you happy with this itinerary? y/n")
+    if user_input == "n":
+            make_changes()
+    else:
+        print("Enjoy your trip! Watch out for Jawas!") 
 
+def make_changes():
+    change_desired = input(f"What would you like to change? Destination, Restaurant, Transportation, Entertainment")
+    if change_desired == "Destination":
+        destination_satisfaction()
+    elif change_desired == "Restaurant":
+        restaurant_satisfaction()
+    elif change_desired == "Transportation":
+        transportation_satisfaction()
+    elif change_desired == "Entertainment":
+        entertainment_satisfaction()
+    else:
+        print("Sorry, please try that again...")       
+
+def destination_satisfaction():
+    dest_sat = False
+    while dest_sat == False:
+        random_destination()
+        destination_change = input(f"Does this sound better to you? y/n")
+        if destination_change == "y":
+            dest_sat = True
+    else:
+        dest_sat = True
+        print("Great! Let's update that itinerary.")
+
+def restaurant_satisfaction():
+    rest_sat = False
+    while rest_sat == False:
+        random_destination()
+        restaurant_change = input(f"Does this sound better to you? y/n")
+        if restaurant_change == "y":
+            rest_sat = True
+    else:
+        rest_sat = True
+        print("Great! Let's update that itinerary.")
+
+def transportation_satisfaction():
+    trans_sat = False
+    while trans_sat == False:
+        random_destination()
+        transportation_change = input(f"Does this sound better to you? y/n")
+        if transportation_change == "y":
+            trans_sat = True
+    else:
+        trans_sat = True
+        print("Great! Let's update that itinerary.")
+
+def entertainment_satisfaction():
+    ent_sat = False
+    while ent_sat == False:
+        random_destination()
+        entertainment_change = input(f"Does this sound better to you? y/n")
+        if entertainment_change == "y":
+            ent_sat = True
+    else:
+        ent_sat = True
+        print("Great! Let's update that itinerary.")
+    
 itinerary()
