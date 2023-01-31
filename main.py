@@ -96,7 +96,7 @@ def destination_satisfaction():
 def restaurant_satisfaction():
     rest_sat = False
     while rest_sat == False:
-        random_destination()
+        random_restaurant()
         restaurant_change = input(f"Does this sound better to you? y/n")
         if restaurant_change == "y":
             rest_sat = True
@@ -107,7 +107,7 @@ def restaurant_satisfaction():
 def transportation_satisfaction():
     trans_sat = False
     while trans_sat == False:
-        random_destination()
+        random_transportation()
         transportation_change = input(f"Does this sound better to you? y/n")
         if transportation_change == "y":
             trans_sat = True
@@ -118,7 +118,7 @@ def transportation_satisfaction():
 def entertainment_satisfaction():
     ent_sat = False
     while ent_sat == False:
-        random_destination()
+        random_entertainment()
         entertainment_change = input(f"Does this sound better to you? y/n")
         if entertainment_change == "y":
             ent_sat = True
