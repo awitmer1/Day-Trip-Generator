@@ -35,10 +35,29 @@ entertainment_list = ["Twi'lek Dance Party", "Round of Sabaac", "Ewok BBQ", "Kes
 
 
 def itinerary():
+    print("Here is your day trip in a galaxy far, far away...")
     random_destination()
     random_restaurant()
     random_transportation()
     random_entertainment()
+    user_satisfaction()
+
+def user_satisfaction():
+    user_input = input(f"Are you happy with this itinerary? y/n")
+    if user_input == "n":    
+        desired_change = input(f"What would you like to change? Destination, Restaurant, Transportation, Entertainment")
+        if desired_change == "Destination":
+            random_destination()
+        elif desired_change == "Restaurant":
+            random_restaurant()
+        elif desired_change == "Transportation":
+            random_transportation()
+        elif desired_change == "Entertainment":
+            random_entertainment()
+        else:
+            print("Please try that again...")
+    else:
+        print("Enjoy your trip! Watch out for Jawas!") 
 
 def random_destination():
     for dest in destination_list:
