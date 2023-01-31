@@ -24,27 +24,41 @@ and/or form of entertainment if I dont like one or more of those things.
 
 import random
 
-def run_day_trip_generator():
-
-def print_full_trip(list_of_options):
-
-def generate_random_item(list_of_items):
-
-def determine_satisfaction(current_trip, trip_options):
-
-def re_select(current_trip, options):
-
-run_day_trip_generator()
-
-
-
-
-
-
 destination_list = ["Tatooine", "Hoth", "Coruscant", "Endor", "Tython", "Geonosis", "Korriban", "Mandalore"]
 
 restaurant_list = ["Mos Eisley Cantina", "Canto Bight Casino", "Lars Family Homestead", "Dex's Restaurant", "Ewok Treetop Village"]
 
-transportation_mode = ["Tantive IV", "Millenium Falcon", "Slave I", "Home One", "Executor", "Invisible Hand", "Scimitar"]
+transportation_list = ["Tantive IV", "Millenium Falcon", "Slave I", "Home One", "Executor", "Invisible Hand", "Scimitar"]
 
 entertainment_list = ["Twi'lek Dance Party", "Round of Sabaac", "Ewok BBQ", "Kessel Run", "Beggars Canyon Target Practice"]
+
+
+
+def itinerary():
+    random_destination()
+    random_restaurant()
+    random_transportation()
+    random_entertainment()
+
+def random_destination():
+    for dest in destination_list:
+        location = random.choice(destination_list)
+    print(f"Location: {location}")
+
+def random_restaurant():
+    for rest in restaurant_list:
+        restaurant = random.choice(restaurant_list)
+    print(f"Restaurant: {restaurant}")
+
+def random_transportation():
+    for trans in transportation_list:
+        transportation = random.choice(transportation_list)
+    print(f"Transport: {transportation}")
+
+def random_entertainment():
+    for ent in entertainment_list:
+        entertainment = random.choice(entertainment_list)
+    print(f"Entertainment: {entertainment}")
+
+
+itinerary()
